@@ -5,7 +5,7 @@
         <record id="hr_planilla_view_form_inherit_unica" model="ir.ui.view">
             <field name="name">hr.planilla.form.inherit.unica</field>
             <field name="model">hr.planilla</field>
-            <field name="inherit_id" ref="treming_sv_payroll.hr_planilla_view_form"/>
+            <field name="inherit_id" ref="treming_sv_payroll.view_form_hr_planilla"/>
             <field name="arch" type="xml">
                 <xpath expr="//header" position="inside">
                     <button name="action_download_planilla_unica_csv" 
