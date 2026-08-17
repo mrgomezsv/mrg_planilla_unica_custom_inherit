@@ -1,27 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <data>
-        <!-- Agregar botón CSV y campos de Planilla Única en hr.planilla -->
+        <!-- Agregar botón CSV de Planilla Única en hr.planilla.
+             Los campos adicionales del tree se omiten porque el view padre
+             no incluye un <tree> dentro de planilla_lines; los campos
+             existen en el modelo y se usan desde Python para generar el CSV. -->
         <record id="hr_planilla_view_form_inherit_unica" model="ir.ui.view">
             <field name="name">hr.planilla.form.inherit.unica</field>
             <field name="model">hr.planilla</field>
             <field name="inherit_id" ref="treming_sv_payroll.view_form_hr_planilla"/>
             <field name="arch" type="xml">
                 <xpath expr="//header" position="inside">
-                    <button name="action_download_planilla_unica_csv" 
-                            string="Descargar CSV Planilla Única" 
-                            type="object" 
-                            class="btn-primary" 
+                    <button name="action_download_planilla_unica_csv"
+                            string="Descargar CSV Planilla Única"
+                            type="object"
+                            class="btn-primary"
                             attrs="{'invisible': [('employer_type', '!=', 'unica')]}"/>
-                </xpath>
-                <xpath expr="//field[@name='planilla_lines']/tree" position="inside">
-                    <field name="total_devengado_unica" optional="show" attrs="{'column_invisible': [('parent.employer_type', '!=', 'unica')]}"/>
-                    <field name="total_vacaciones_unica" optional="show" attrs="{'column_invisible': [('parent.employer_type', '!=', 'unica')]}"/>
-                    <field name="dias_trabajados_unica" optional="show" attrs="{'column_invisible': [('parent.employer_type', '!=', 'unica')]}"/>
-                    <field name="horas_diarias_unica" optional="show" attrs="{'column_invisible': [('parent.employer_type', '!=', 'unica')]}"/>
-                    <field name="dias_vacacion_unica" optional="show" attrs="{'column_invisible': [('parent.employer_type', '!=', 'unica')]}"/>
-                    <field name="codigo_observacion_1" optional="show" attrs="{'column_invisible': [('parent.employer_type', '!=', 'unica')]}"/>
-                    <field name="codigo_observacion_2" optional="show" attrs="{'column_invisible': [('parent.employer_type', '!=', 'unica')]}"/>
                 </xpath>
             </field>
         </record>
