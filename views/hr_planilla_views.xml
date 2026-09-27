@@ -15,7 +15,7 @@
                             string="Descargar CSV Planilla Única"
                             type="object"
                             class="btn-primary"
-                            attrs="{'invisible': [('employer_type', '!=', 'unica')]}"/>
+                            invisible="employer_type != 'unica'"/>
                 </xpath>
             </field>
         </record>
