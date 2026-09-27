@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 {
     'name': 'MRG Planilla Única Custom Inherit',
-    'version': '16.0.1.0.0',
+    'version': '19.0.1.0.0',
     'category': 'Human Resources/Payroll',
     'summary': 'Mejoras y cálculos para la generación y exportación CSV de Planilla Única',
     'description': """
