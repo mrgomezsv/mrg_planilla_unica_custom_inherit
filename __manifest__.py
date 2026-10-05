@@ -1,4 +1,4 @@
-﻿# -*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
 {
     'name': 'MRG Planilla Única Custom Inherit',
     'version': '20.0.1.0.0',
